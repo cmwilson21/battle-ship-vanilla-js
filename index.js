@@ -8,12 +8,20 @@ const loc1 = 3;
 const loc2 = 4;
 const loc3 = 5;
 
-const guess;
-const hits = 0;
-const numberOfGuesses = 0;
+let guess ;
+let hits = 0;
+let numberOfGuesses = 0;
 
-const isSunk = false;
+let isSunk = false;
 
 while (isSunk === false) {
     guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
+    if (guess < 0 || guess > 6) {
+        alert("Please enter a valid cell number!");
+    } else {
+        guesses = guesses + 1;
+        if (guess == loc1 || guess == loc2 || guess == loc3) {
+            hits = hits + 1;
+        }
+    }
 }
